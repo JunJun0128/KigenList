@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ShoumiKigenList</string>
+    <string name="msg_destruction">メモを破棄しました。</string>
 </resources>
