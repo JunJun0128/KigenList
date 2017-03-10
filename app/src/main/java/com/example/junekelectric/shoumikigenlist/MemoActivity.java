@@ -14,6 +14,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
+
 public class MemoActivity extends AppCompatActivity {
 
     EditText titleEditText;
@@ -72,7 +73,8 @@ public class MemoActivity extends AppCompatActivity {
         editor.putString("key_title", titleText);
         editor.putString("key_date", dateText);
         editor.putString("key_content", contentText);
-        editor.commit();
+        //editor.commit();
+        editor.apply();
         finish();
 
         Intent intent = new Intent(this, listActivity.class);

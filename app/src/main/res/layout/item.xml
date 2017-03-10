@@ -17,13 +17,15 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:text="名"
-                android:id="@+id/title" />
+                android:id="@+id/title"
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="切れる日"
-                android:id="@+id/date" />
+                android:id="@+id/date"
+                android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
 
         <TextView

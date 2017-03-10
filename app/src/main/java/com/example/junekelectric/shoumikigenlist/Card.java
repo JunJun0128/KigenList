@@ -1,13 +1,18 @@
 package com.example.junekelectric.shoumikigenlist;
 
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
 import static android.content.Context.MODE_PRIVATE;
 
-public class listViewActivity extends AppCompatActivity{
+/**
+ * Created by junekelectric on 2017/02/24.
+ */
 
+//public class listViewActivity extends AppCompatActivity{
+public class Card extends AppCompatActivity {
     TextView titleTextView;
     TextView dateTextView;
     TextView contentTextView;
@@ -18,7 +23,7 @@ public class listViewActivity extends AppCompatActivity{
 
     //public String
 
-    public listViewActivity(String title, String date, String content) {
+    public Card(String title, String date, String content) {
         this.title = title;
         this.date = date;
         this.content = content;
