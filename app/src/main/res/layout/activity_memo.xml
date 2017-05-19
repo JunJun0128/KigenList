@@ -12,50 +12,59 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="name"
-            android:id="@+id/textView3" />
-
-        <EditText
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/title"
-            android:singleLine="true" />
+            android:layout_height="100dp">
 
-        <TextView
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/title"
+                android:hint="Enter Food Name"
+                android:singleLine="true"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="date"
-            android:id="@+id/textView2" />
+            android:layout_height="50dp">
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:ems="10"
-            android:id="@+id/date"
-            android:singleLine="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="date"
+                android:hint="Choose Date"
+                android:id="@+id/date"
+                android:textSize="18sp"
+                android:layout_weight="1"
+                android:textAlignment="gravity" />
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="content"
-            android:id="@+id/textView" />
-
-        <EditText
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:id="@+id/content"
-            android:autoText="false"
-            android:background="@android:color/transparent" />
+            android:layout_height="250dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/content"
+                android:autoText="false"
+                android:background="@android:color/transparent"
+                android:hint="Other Memo"
+                android:layout_weight="1" />
+        </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="save"
             android:id="@+id/button2"
             android:onClick="save"

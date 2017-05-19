@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 import static android.content.Context.MODE_PRIVATE;
 
 /**
@@ -12,36 +14,62 @@ import static android.content.Context.MODE_PRIVATE;
  */
 
 //public class listViewActivity extends AppCompatActivity{
-public class Card extends AppCompatActivity {
-    TextView titleTextView;
-    TextView dateTextView;
-    TextView contentTextView;
+public class Card implements Serializable {
+//    TextView titleTextView;
+//    TextView dateTextView;
+//    TextView contentTextView;
+    //public String date;
     public String title;
-    public String date;
     public String content;
+    public long diffday;
     SharedPreferences pref;
 
-    //public String
-
-    public Card(String title, String date, String content) {
+    public Card(String title, long diffday, String content) {
         this.title = title;
-        this.date = date;
         this.content = content;
+        this.diffday = diffday;
+        //this.date = date;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.item);
+        public String getTitle() {
+            return title;
+        }
 
-        titleTextView = (TextView)findViewById(R.id.title);
-        dateTextView = (TextView)findViewById(R.id.date);
-        contentTextView = (TextView)findViewById(R.id.content);
+        public void setTitle(String title) {
+            this.title = title;
+        }
 
-        pref = getSharedPreferences("pref_memo", MODE_PRIVATE);
+        public String getContent() {
+            return content;
+        }
 
-        titleTextView.setText(pref.getString("key_title", ""));
-        dateTextView.setText(pref.getString("key_date", ""));
-        contentTextView.setText(pref.getString("key_content",""));
-    }
+        public void setContent(String content) {
+            this.content = content;
+        }
+
+        public long getDiffday() {
+            return diffday;
+        }
+
+        public void setDiffday(long diffday) {
+            this.diffday = diffday;
+        }
+
+
+
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.item);
+//
+//        titleTextView = (TextView)findViewById(R.id.title);
+//        dateTextView = (TextView)findViewById(R.id.date);
+//        contentTextView = (TextView)findViewById(R.id.content);
+//
+//        pref = getSharedPreferences("pref_memo", MODE_PRIVATE);
+//
+//        titleTextView.setText(pref.getString("key_title", ""));
+//        dateTextView.setText(pref.getString("key_date", ""));
+//        contentTextView.setText(pref.getString("key_content",""));
+//    }
 }
