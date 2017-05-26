@@ -39,9 +39,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
     EditText titleEditText;
     EditText contentEditText;
     TextView dateTextView;
-
     //SharedPreferences pref;
-
     String mtitle;
     String mcontent;
     String mdeadline;
@@ -110,7 +108,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
 
     public boolean readFile(){
         try {
-            FileInputStream fis = openFileInput("lHomework");
+            FileInputStream fis = openFileInput("lCard");
             ObjectInputStream ois = new ObjectInputStream(fis);
             foodList = (ArrayList<Card>) ois.readObject();
             ois.close();
@@ -198,19 +196,18 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         String titleText = titleEditText.getText().toString();
         String dateText = dateTextView.getText().toString();
         String contentText = contentEditText.getText().toString();
+        String mcontent = String.valueOf(contentEditText.getText());
+        String mtitle = String.valueOf(titleEditText.getText());
+        Card addCard = new Card (mtitle, mdiffday, mcontent);
 
+        foodList.add(addCard);
         if (titleText.isEmpty() && dateText.isEmpty() && contentText.isEmpty()) {
             Toast.makeText(this, R.string.msg_destruction, Toast.LENGTH_SHORT).show();
             return;
         }
 
-        String mcontent = String.valueOf(contentEditText.getText());
-        String mtitle = String.valueOf(titleEditText.getText());
-        Card addCard = new Card (mtitle, mdiffday, mcontent);
-        foodList.add(addCard);
-
         try {
-            FileOutputStream fos = openFileOutput("lHomework", MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput("lCard", MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(foodList);
             oos.close();
@@ -218,18 +215,19 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         } catch (Exception e) {
 
         }
-        Intent intent = new Intent(this, ListActivity.class);
+        Intent intent = new Intent(MemoActivity.this, listActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
 
-        try {
-            FileOutputStream fos = openFileOutput("savesubject", MODE_PRIVATE);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(readList);
-            oos.close();
-            fos.close();
-        } catch (Exception e) {
-        }
+        //savesubject 関係ない
+//        try {
+//            FileOutputStream fos = openFileOutput("savesubject", MODE_PRIVATE);
+//            ObjectOutputStream oos = new ObjectOutputStream(fos);
+//            oos.writeObject(readList);
+//            oos.close();
+//            fos.close();
+//        } catch (Exception e) {
+//        }
 
         try {
             FileOutputStream fos = openFileOutput("savehelper", MODE_PRIVATE);

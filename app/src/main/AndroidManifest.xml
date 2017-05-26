@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MemoActivity" />
-        <activity android:name=".listViewActivity" />
         <activity android:name=".listActivity"></activity>
     </application>
 
