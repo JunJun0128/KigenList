@@ -11,31 +11,33 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/cookingillust" />
+        android:background="@drawable/mainmenu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="270dp" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="登録"
         android:id="@+id/button"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
         android:onClick="memo"
         android:background="#ffe57f"
-        android:elevation="0dp" />
+        android:elevation="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="TO LIST"
         android:id="@+id/button3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:background="#17dda8"
         android:onClick="move"
-        android:elevation="0dp" />
+        android:elevation="0dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="125dp" />
 </RelativeLayout>
