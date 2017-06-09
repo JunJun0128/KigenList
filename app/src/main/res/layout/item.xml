@@ -11,8 +11,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="left">
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -27,14 +26,14 @@
                 android:layout_height="wrap_content"
                 android:text="EXP. DATE"
                 android:id="@+id/date"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NOTES"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:id="@+id/content" />
 
         </LinearLayout>
@@ -43,12 +42,15 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="right">
+            android:layout_weight=""
+            android:layout_gravity="right"
+            android:gravity="right">
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingTop="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -65,7 +67,7 @@
             </LinearLayout>
 
             <TextView
-                android:text="xxx"
+                android:text=" "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="50sp"
