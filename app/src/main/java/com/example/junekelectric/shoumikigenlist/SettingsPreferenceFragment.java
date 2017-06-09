@@ -5,4 +5,5 @@ package com.example.junekelectric.shoumikigenlist;
  */
 
 public class SettingsPreferenceFragment {
+
 }
