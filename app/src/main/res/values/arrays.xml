@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    //引用from http://appdevmem.blogspot.jp/2015/09/android-app-settings.html
+
+    //Notifiaction が　on,offか
+
+    //Text Size  10,20,40ptなどなど
+
+    //選べる背景色 後で文字色も同時に変えられるように設定
     <string-array name="entries_background">
         <item>White</item>
         <item>Black</item>
@@ -14,4 +21,8 @@
         <item>LIGHTBLUE</item>
         <item>PINK</item>
     </string-array>
+
+    //カメラあるいはスキャナーを許可
+    //最後に変えていい
+
 </resources>
