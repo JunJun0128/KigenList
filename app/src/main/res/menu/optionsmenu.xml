@@ -14,9 +14,9 @@
         android:title="Design"
         android:icon="@drawable/design"/>
 
-    <item
-        android:id="@+id/menuitem4"
-        android:icon="@drawable/eye"/>
+    <!--<item-->
+        <!--android:id="@+id/menuitem4"-->
+        <!--android:icon="@drawable/eye"/>-->
         <!--android:title="カメラかスキャナーのどちらかにする"-->
 
 

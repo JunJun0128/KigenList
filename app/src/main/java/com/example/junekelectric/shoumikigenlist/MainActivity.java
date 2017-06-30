@@ -25,21 +25,23 @@ public class MainActivity extends AppCompatActivity {
     @Override public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
         case R.id.menuitem1:
-            Intent intent = new Intent(this, .class);
+            Intent intentfont = new Intent(this, FontSizeActivity.class);
             //showMessage("Hello! Item1");
             return true;
         case R.id.menuitem2:
-            Intent intent = new Intent(this, .class);
+            Intent intentnotification = new Intent(this, NotificationActivity.class);
             //showMessage("Hello! Item2");
             return true;
         case R.id.menuitem3:
-            Intent intent = new Intent(this, .class);
+            Intent intentdesign = new Intent(this, DesignActivity.class);
             //showMessage("Hello! Item3");
             return true;
-        case R.id.menuitem4;
-            Intent intent = new Intent(this, .class);
-            //showMessage("Hello! Item4");
-            return true;
+
+//        case R.id.menuitem4;
+//            Intent intent = new Intent(this, .class);
+//            //showMessage("Hello! Item4");
+//            return true;
+
         }
         return false;
     }

@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MemoActivity" />
-        <activity android:name=".listActivity"></activity>
+        <activity android:name=".listActivity" />
+        <activity android:name=".FontSizeActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".DesignActivity"></activity>
     </application>
 
 </manifest>
