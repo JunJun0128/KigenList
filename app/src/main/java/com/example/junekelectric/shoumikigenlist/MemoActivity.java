@@ -238,24 +238,6 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         } catch (Exception e) {
         }
 
-        // 保存（自分過去）
-//        OutputStream out = null;
-//        PrintWriter writer = null;
-//        try{
-//            out = this.openFileOutput(mFileName, Context.MODE_PRIVATE);
-//            writer = new PrintWriter(new OutputStreamWriter(out,"UTF-8"));
-//            // タイトル書き込み
-//            writer.print(titleText);
-//            //日付書き込み
-//            writer.print(dateText);
-//            // 内容書き込み
-//            writer.print(contentText);
-//            writer.close();
-//            out.close();
-//        }catch(Exception e){
-//            Toast.makeText(this, "File save error!", Toast.LENGTH_LONG).show();
-//        }
-
 //        pref　多分使わない
 //        SharedPreferences.Editor editor = pref.edit();
 //        editor.putString("key_title", titleText);
