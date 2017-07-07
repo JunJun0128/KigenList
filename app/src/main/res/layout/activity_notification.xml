@@ -22,7 +22,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="73dp"
-            android:id="@+id/notiswitch"
+            android:id="@+id/noti_switch"
             android:layout_weight="1"
             android:fontFamily="casual" />
     </LinearLayout>

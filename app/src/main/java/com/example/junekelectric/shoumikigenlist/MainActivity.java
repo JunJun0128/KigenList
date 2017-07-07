@@ -66,10 +66,12 @@ public class MainActivity extends AppCompatActivity {
 //        return super.onOptionsItemSelected(item);
 //    }
 
-    public void memo(View v) {
+    public void add(View v) {
         Intent intent = new Intent(this, MemoActivity.class);
         startActivity(intent);
     }
+
+    //public void scan(View v) {}
 
     public void move(View v) {
         Intent intent = new Intent(this, listActivity.class);

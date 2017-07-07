@@ -2,6 +2,7 @@ package com.example.junekelectric.shoumikigenlist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class FontSizeActivity extends AppCompatActivity {
 
@@ -11,7 +12,15 @@ public class FontSizeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_font_size);
     }
 
-    //font10のラジボタを押したら、リスト全体の文字がfont10に。
-    //１５同様
-    //２０同様
+    public void font10 (View v) {
+
+    }
+
+    public void font15 (View v) {
+
+    }
+
+    public void font20 (View v) {
+
+    }
 }

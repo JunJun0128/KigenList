@@ -19,71 +19,29 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <LinearLayout
-            android:orientation="horizontal"
+        <RadioButton
             android:layout_width="match_parent"
-            android:layout_height="162dp"
-            android:gravity="top"
-            android:layout_gravity="top">
+            android:layout_height="200dp"
+            android:id="@+id/font10"
+            android:layout_weight="1"
+            android:onClick="font10"
+            android:background="@drawable/font10" />
 
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton2"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/font10"
-                android:id="@+id/imageView2"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <RadioButton
             android:layout_width="match_parent"
-            android:layout_height="162dp">
+            android:layout_height="200dp"
+            android:id="@+id/font15"
+            android:layout_weight="1"
+            android:onClick="font15"
+            android:background="@drawable/font15" />
 
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton3"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:layout_width="295dp"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/font15"
-                android:id="@+id/imageView3" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <RadioButton
             android:layout_width="match_parent"
-            android:layout_height="162dp"
-            android:gravity="bottom"
-            android:layout_gravity="bottom">
-
-            <RadioButton
-                android:text="RadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radioButton4"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/font20"
-                android:id="@+id/imageView4"
-                android:layout_weight="1" />
-
-        </LinearLayout>
+            android:layout_height="200dp"
+            android:id="@+id/font20"
+            android:layout_weight="1"
+            android:background="@drawable/font20"
+            android:onClick="font20" />
 
     </LinearLayout>
 </RelativeLayout>
