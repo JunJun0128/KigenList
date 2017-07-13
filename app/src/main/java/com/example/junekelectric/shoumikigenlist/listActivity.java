@@ -3,6 +3,7 @@ import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.design.widget.FloatingActionButton;
@@ -56,7 +57,15 @@ public class listActivity extends AppCompatActivity {
             }
         });
 
-        //toolbar　使わない
+        ImageButton DeleteButton = (ImageButton)findViewById(R.id.DeleteButton);
+        DeleteButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                //削除処理
+                //Snackbarで通知
+                Snackbar.make(v, "削除しました", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         readFoodList = new ArrayList<Card>();
         readFile();
