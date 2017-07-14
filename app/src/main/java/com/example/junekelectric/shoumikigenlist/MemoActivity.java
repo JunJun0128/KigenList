@@ -56,10 +56,10 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         setContentView(R.layout.activity_memo);
 
         //定義とそれぞれの入力画面の機能
-        titleEditText =  (EditText)findViewById(R.id.title);
+        titleEditText =  (EditText)findViewById(R.id.titleadd);
         titleEditText.setInputType(InputType.TYPE_CLASS_TEXT);
 
-        dateTextView = (TextView) findViewById(R.id.date);
+        dateTextView = (TextView) findViewById(R.id.dateadd);
         dateTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +67,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
             }
         });
 
-        contentEditText = (EditText) findViewById(R.id.content);
+        contentEditText = (EditText) findViewById(R.id.contentadd);
         titleEditText.setInputType(InputType.TYPE_CLASS_TEXT);
 
         //SharedPrefrencesについて定義

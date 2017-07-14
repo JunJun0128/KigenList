@@ -1,11 +1,13 @@
 package com.example.junekelectric.shoumikigenlist;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -14,21 +16,35 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 import static android.R.attr.onClick;
+import static com.example.junekelectric.shoumikigenlist.R.id.contentitem;
+import static com.example.junekelectric.shoumikigenlist.R.id.contentwrite;
+import static com.example.junekelectric.shoumikigenlist.R.id.dateitem;
+import static com.example.junekelectric.shoumikigenlist.R.id.datewrite;
+import static com.example.junekelectric.shoumikigenlist.R.id.howmanyDaysleft;
+import static com.example.junekelectric.shoumikigenlist.R.id.howmanydaysLeft;
+import static com.example.junekelectric.shoumikigenlist.R.id.titleitem;
+import static com.example.junekelectric.shoumikigenlist.R.id.titlewrite;
+
+import static com.example.junekelectric.shoumikigenlist.R.layout.activity_memo;
+import static com.example.junekelectric.shoumikigenlist.R.layout.item;
 
 public class FontSizeActivity extends AppCompatActivity {
     RadioGroup radio;
     SharedPreferences fontsize;
 
-    TextView titleadd = (TextView)findViewById(R.id.MemoActivity.title);
-    TextView dateadd = (TextView)findViewById(R.id.MemoActivity.date);
-    TextView contentadd = (TextView)findViewById(R.id.MemoActivity.content);
+    //引用の仕方わからん。
 
-    TextView titlelist = (TextView)findViewById(R.id.Card.title);
-    TextView dayslist = (TextView)findViewById(R.id.Card.days);
-    TextView contentlist = (TextView)findViewById(R.id.Card.content);
-    TextView Daysleft = (TextView)findViewById(R.id.Card.howmanyDaysleft);
-    TextView daysLeft = (TextView)findViewById(R.id.Card.howmanydaysLeft);
-    TextView diff = (TextView)findViewById(R.id.Card.diff);
+    EditText titleadd = (TextView)activity_memo.findViewById(titlewrite);
+    EditText titleadd;
+    TextView dateadd = (TextView)activity_memo.findViewById(datewrite);
+    EditText contentadd = (TextView)activity_memo.findViewById(contentwrite);
+
+    TextView titlelist = (TextView)item.findViewById(titleitem);
+    TextView dayslist = (TextView)item.findViewById(dateitem);
+    TextView contentlist = (TextView)item.findViewById(contentitem);
+    TextView Daysleft = (TextView)item.findViewById(howmanyDaysleft);
+    TextView daysLeft = (TextView)item.findViewById(howmanydaysLeft);
+    TextView diff = (TextView)item.findViewById(diff);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

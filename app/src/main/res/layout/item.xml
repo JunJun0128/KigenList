@@ -19,7 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NAME"
-                android:id="@+id/title"
+                android:id="@+id/titleitem"
                 android:textSize="25sp"
                 android:textColor="@color/colorPrimaryDark" />
 
@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXP. DATE"
-                android:id="@+id/date"
+                android:id="@+id/dateitem"
                 android:textSize="20sp"
                 android:textColor="@color/colorPrimaryDark" />
 
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:text="NOTES"
                 android:textSize="15sp"
-                android:id="@+id/content" />
+                android:id="@+id/contentitem" />
 
         </LinearLayout>
 

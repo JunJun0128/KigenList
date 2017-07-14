@@ -25,7 +25,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/title"
+                android:id="@+id/titlewrite"
                 android:hint="Enter Food Name"
                 android:singleLine="true"
                 android:layout_weight="1" />
@@ -41,7 +41,7 @@
                 android:layout_height="match_parent"
                 android:text="Enter Exp. Date"
                 android:hint="Choose Date"
-                android:id="@+id/date"
+                android:id="@+id/datewrite"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:textAlignment="gravity" />
@@ -55,7 +55,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/content"
+                android:id="@+id/contentwrite"
                 android:autoText="false"
                 android:background="@android:color/transparent"
                 android:hint="Other Memo"
