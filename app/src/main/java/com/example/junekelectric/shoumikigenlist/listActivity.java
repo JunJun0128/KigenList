@@ -36,17 +36,12 @@ public class listActivity extends AppCompatActivity {
     List<Card> readFoodList;
     List<Card> saveList;
     Card addCard;
-    //SharedPreferences pref;
-
-    // ListViewに表示する食べ物（仮、zackさんより）
-    //    public static final String[] food = {
-    //           "魚", "牛", "七面鳥"
-    //    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+
 
         //floatingactionbutton
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -79,7 +74,7 @@ public class listActivity extends AppCompatActivity {
         //foodList.add(new Card(pref.getString("key_title", ""), pref.getString("key_date", ""), pref.getString("key_content","")));
 
         mFoodAdapter = new foodAdapter(this, R.layout.item, readFoodList);
-        list = (ListView) findViewById(R.id.list);
+        list = (ListView)findViewById(R.id.list);
         list.setAdapter(mFoodAdapter);
         //AlertDialog
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

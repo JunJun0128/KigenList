@@ -3,8 +3,10 @@ package com.example.junekelectric.shoumikigenlist;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.EditText;
@@ -18,10 +20,13 @@ import org.w3c.dom.Text;
 import static android.R.attr.onClick;
 import static com.example.junekelectric.shoumikigenlist.R.id.contentitem;
 import static com.example.junekelectric.shoumikigenlist.R.id.contentwrite;
+
 import static com.example.junekelectric.shoumikigenlist.R.id.dateitem;
 import static com.example.junekelectric.shoumikigenlist.R.id.datewrite;
 import static com.example.junekelectric.shoumikigenlist.R.id.howmanyDaysleft;
 import static com.example.junekelectric.shoumikigenlist.R.id.howmanydaysLeft;
+import static com.example.junekelectric.shoumikigenlist.R.id.diff;
+
 import static com.example.junekelectric.shoumikigenlist.R.id.titleitem;
 import static com.example.junekelectric.shoumikigenlist.R.id.titlewrite;
 
@@ -30,21 +35,18 @@ import static com.example.junekelectric.shoumikigenlist.R.layout.item;
 
 public class FontSizeActivity extends AppCompatActivity {
     RadioGroup radio;
-    SharedPreferences fontsize;
+    SharedPreferences settingss;
 
-    //引用の仕方わからん。
+    EditText titleadd = (EditText)activity_memo.(titlewrite);
+    TextView dateadd = (TextView)activity_memo.(datewrite);
+    EditText contentadd = (TextView)activity_memo.(contentwrite);
 
-    EditText titleadd = (TextView)activity_memo.findViewById(titlewrite);
-    EditText titleadd;
-    TextView dateadd = (TextView)activity_memo.findViewById(datewrite);
-    EditText contentadd = (TextView)activity_memo.findViewById(contentwrite);
-
-    TextView titlelist = (TextView)item.findViewById(titleitem);
-    TextView dayslist = (TextView)item.findViewById(dateitem);
-    TextView contentlist = (TextView)item.findViewById(contentitem);
-    TextView Daysleft = (TextView)item.findViewById(howmanyDaysleft);
-    TextView daysLeft = (TextView)item.findViewById(howmanydaysLeft);
-    TextView diff = (TextView)item.findViewById(diff);
+//    TextView titlelist = (TextView)item.(titleitem);
+//    TextView dayslist = (TextView)item.(dateitem);
+//    TextView contentlist = (TextView)item.(contentitem);
+//    TextView Daysleft = (TextView)item.(howmanyDaysleft);
+//    TextView daysLeft = (TextView)item.(howmanydaysLeft);
+//    TextView diffday = (TextView)item.(diff);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +80,7 @@ public class FontSizeActivity extends AppCompatActivity {
 
     public void save(View v) {
         //Preference内操作
-        SharedPreferences.Editor editor = fontsize.edit();
+        SharedPreferences.Editor editor = settingss.edit();
         editor.putString("key_font10", 0);
         editor.putString("key_font15", 1);
         editor.putString("key_font20", 2);
@@ -96,12 +98,12 @@ public class FontSizeActivity extends AppCompatActivity {
             titleadd.setTextSize(10);
             dateadd.setTextSize(10);
             contentadd.setTextSize(10);
-            titlelist.setTextSize(10);
-            dayslist.setTextSize(10);
-            contentlist.setTextSize(10);
-            daysLeft.setTextSize(10);
-            Daysleft.setTextSize(10);
-            diff.setTextSize(10);
+//            titlelist.setTextSize(10);
+//            dayslist.setTextSize(10);
+//            contentlist.setTextSize(10);
+//            daysLeft.setTextSize(10);
+//            Daysleft.setTextSize(10);
+//            diffday.setTextSize(10);
         } else if (id == 2) {
             titleadd.setTextSize(20);
             dateadd.setTextSize(20);
@@ -111,7 +113,7 @@ public class FontSizeActivity extends AppCompatActivity {
             contentlist.setTextSize(20);
             daysLeft.setTextSize(20);
             Daysleft.setTextSize(20);
-            diff.setTextSize(20);
+            diffday.setTextSize(20);
         } else {
             titleadd.setTextSize(15);
             dateadd.setTextSize(15);
@@ -121,7 +123,7 @@ public class FontSizeActivity extends AppCompatActivity {
             contentlist.setTextSize(15);
             daysLeft.setTextSize(15);
             Daysleft.setTextSize(15);
-            diff.setTextSize(15);
+            diffday.setTextSize(15);
         }
 
         Intent intent = new Intent(this, MainActivity.class);
