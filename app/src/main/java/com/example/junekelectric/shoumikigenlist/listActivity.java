@@ -34,7 +34,7 @@ public class listActivity extends AppCompatActivity {
     foodAdapter mFoodAdapter;
     ArrayList<Card> foodList;
     List<Card> readFoodList;
-    List<Card> saveList;
+    //List<Card> saveList;
     Card addCard;
 
     @Override
@@ -60,10 +60,10 @@ public class listActivity extends AppCompatActivity {
             }
         });
 
-        readFoodList = new ArrayList<Card>();
+        readFoodList = new ArrayList<>();
         readFile();
 
-        foodList = new ArrayList<Card>();
+        //foodList = new ArrayList<>();
 
         //prefについて
         //pref = getSharedPreferences("pref_memo", MODE_PRIVATE);

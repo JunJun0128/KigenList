@@ -48,7 +48,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
     //String subject[];
     List<String> readList;
     String helper[];
-    List<String> readHelperList;
+    //List<String> readHelperList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         contentEditText = (EditText) findViewById(R.id.contentwrite);
         titleEditText.setInputType(InputType.TYPE_CLASS_TEXT);
         foodList = new ArrayList<Card>();
+        readFile();
 
 
 
@@ -90,12 +91,12 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
 
             //ArrayListについて定義
             foodList = new ArrayList<>();
-            readFile();
+            //readFile();
 
             readList = new ArrayList<String>();
-            readHelperList = new ArrayList<String>();
-            readSubjectFile();
-            readHelperFile();
+            //readHelperList = new ArrayList<String>();
+            //readSubjectFile();
+            //readHelperFile();
             //firststarting();
         }
         // TODO 下に括弧が足りなかった！
@@ -166,28 +167,28 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         }
     }
 
-    public boolean readHelperFile() {
-        try {
-            FileInputStream fis = openFileInput("savehelper");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            readHelperList = (List<String>) ois.readObject();
-            ois.close();
-            fis.close();
-            return true;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return false;
-        } catch (StreamCorruptedException e) {
-            e.printStackTrace();
-            return false;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
+//    public boolean readHelperFile() {
+//        try {
+//            FileInputStream fis = openFileInput("savehelper");
+//            ObjectInputStream ois = new ObjectInputStream(fis);
+//            readHelperList = (List<String>) ois.readObject();
+//            ois.close();
+//            fis.close();
+//            return true;
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//            return false;
+//        } catch (StreamCorruptedException e) {
+//            e.printStackTrace();
+//            return false;
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return false;
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
 
 //    public boolean firststarting() {
 //        String[] firstsubject = {"古典", "現代文", "数I", "数Ⅱ", "英語", "英語表現",
@@ -244,14 +245,14 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
 //        } catch (Exception e) {
 //        }
 
-        try {
-            FileOutputStream fos = openFileOutput("savehelper", MODE_PRIVATE);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(readHelperList);
-            oos.close();
-            fos.close();
-        } catch (Exception e) {
-        }
+//        try {
+//            FileOutputStream fos = openFileOutput("savehelper", MODE_PRIVATE);
+//            ObjectOutputStream oos = new ObjectOutputStream(fos);
+//            oos.writeObject(readHelperList);
+//            oos.close();
+//            fos.close();
+//        } catch (Exception e) {
+//        }
 
 //        pref　多分使わない
 //        SharedPreferences.Editor editor = pref.edit();

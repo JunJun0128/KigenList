@@ -1,83 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_weight="1"
-        android:layout_gravity="left">
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/titleitem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NAME"
-                android:id="@+id/titleitem"
-                android:textSize="25sp"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/dateitem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EXP. DATE"
-                android:id="@+id/dateitem"
-                android:textSize="20sp"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/contentitem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NOTES"
-                android:textSize="15sp"
-                android:id="@+id/contentitem" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:gravity="right">
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:paddingTop="15dp">
 
                 <TextView
+                    android:id="@+id/howmanyDaysleft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/howmanyDaysleft"
-                    android:text="days"/>
+                    android:text="days" />
 
                 <TextView
+                    android:id="@+id/howmanydaysLeft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/howmanydaysLeft"
-                    android:text="left"/>
+                    android:text="left" />
 
             </LinearLayout>
 
             <TextView
-                android:text=" "
+                android:id="@+id/diff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:gravity="bottom"
-                android:id="@+id/diff"
-                android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:gravity="bottom"
+                android:text=" "
+                android:textColor="@color/colorPrimary"
+                android:textSize="50sp" />
         </LinearLayout>
 
     </LinearLayout>
