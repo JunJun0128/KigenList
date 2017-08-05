@@ -69,16 +69,18 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
 
         contentEditText = (EditText) findViewById(R.id.contentwrite);
         titleEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+        foodList = new ArrayList<Card>();
+
+
 
         SharedPreferences settingss = getSharedPreferences("ShoumiKigen", MODE_PRIVATE);
         int fontsize = settingss.getInt("keyfont", 15);
 
-        // TODO settingss. ifってなってた
+        // TODO　settings if ってなってた
         if (fontsize == 10) {
             titleEditText.setTextSize(fontsize);
             dateTextView.setTextSize(fontsize);
             contentEditText.setTextSize(fontsize);
-
 
             //SharedPrefrencesについて定義
 //        pref = getSharedPreferences("pref_memo", MODE_PRIVATE);
@@ -212,6 +214,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         String mtitle = String.valueOf(titleEditText.getText());
         Card addCard = new Card(mtitle, mdiffday, mcontent);
 
+     //216がnull pointer exception
         foodList.add(addCard);
         if (titleText.isEmpty() && dateText.isEmpty() && contentText.isEmpty()) {
             Toast.makeText(this, R.string.msg_destruction, Toast.LENGTH_SHORT).show();

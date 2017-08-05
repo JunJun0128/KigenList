@@ -84,7 +84,7 @@ public class foodAdapter extends ArrayAdapter<Card> {
             inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item, null);
 
-            TextView title = (TextView) convertView.findViewById(R.id.title);
+            TextView title = (TextView) convertView.findViewById(R.id.titleitem);
             TextView content = (TextView) convertView.findViewById(R.id.contentitem);
             TextView date = (TextView) convertView.findViewById(R.id.dateitem);
             TextView diff = (TextView) convertView.findViewById(R.id.diff);
