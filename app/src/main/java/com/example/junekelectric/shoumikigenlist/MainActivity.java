@@ -1,6 +1,7 @@
 package com.example.junekelectric.shoumikigenlist;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    SharedPreferences settingss;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,22 +19,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+
     @Override public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.optionsmenu, menu);
         return true; }
 
+
+    //設定の項目。右上にSettingをクリックしたら設定画面に飛ぶ。その中身
     @Override public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
+
+        //FontSize
         case R.id.menuitem1:
             Intent intentfont = new Intent(this, FontSizeActivity.class);
             //showMessage("Hello! Item1");
             return true;
+
+        //Notification
         case R.id.menuitem2:
             Intent intentnotification = new Intent(this, NotificationActivity.class);
             //showMessage("Hello! Item2");
             return true;
+
+        //背景
         case R.id.menuitem3:
             Intent intentdesign = new Intent(this, DesignActivity.class);
             //showMessage("Hello! Item3");

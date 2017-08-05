@@ -39,7 +39,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
     EditText titleEditText;
     EditText contentEditText;
     TextView dateTextView;
-    //SharedPreferences pref;
+    SharedPreferences settingss;
     String mtitle;
     String mcontent;
     String mdeadline;
@@ -56,10 +56,10 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         setContentView(R.layout.activity_memo);
 
         //定義とそれぞれの入力画面の機能
-        titleEditText =  (EditText)findViewById(R.id.titleadd);
+        titleEditText =  (EditText)findViewById(R.id.titlewrite);
         titleEditText.setInputType(InputType.TYPE_CLASS_TEXT);
 
-        dateTextView = (TextView) findViewById(R.id.dateadd);
+        dateTextView = (TextView) findViewById(R.id.datewrite);
         dateTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,8 +67,17 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
             }
         });
 
-        contentEditText = (EditText) findViewById(R.id.contentadd);
+        contentEditText = (EditText) findViewById(R.id.contentwrite);
         titleEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+
+        SharedPreferences settingss = getSharedPreferences("ShoumiKigen", MODE_PRIVATE);
+        int fontsize = settingss.getInt("keyfont", 15);
+
+                settingss.if(fontsize == 10){
+            titleEditText.setTextSize(fontsize);
+            dateTextView.setTextSize(fontsize);
+            contentEditText.setTextSize(fontsize);
+
 
         //SharedPrefrencesについて定義
 //        pref = getSharedPreferences("pref_memo", MODE_PRIVATE);

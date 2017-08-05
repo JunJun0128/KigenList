@@ -19,17 +19,10 @@ import static com.example.junekelectric.shoumikigenlist.R.id.diff;
  */
 
 public class Card implements Serializable {
-
-    //public String date;
     public String title;
     public String content;
     public long diffday;
-    SharedPreferences settingss;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.item);
 
 //        titleitem = (TextView)findViewById(titleitem);
 //        dateitem = (TextView)findViewById(dateitem);
@@ -38,29 +31,28 @@ public class Card implements Serializable {
 //        howmanydaysLeft = (TextView)findViewById(howmanydaysLeft);
 //        diff = (TextView)findViewById(diff);
 
-        settingss if( == 0){
-            titleitem.setTextSize(10);
-            dateitem.setTextSize(10);
-            contentitem.setTextSize(10);
-            howmanyDaysleft.setTextSize(10);
-            howmanydaysLeft.setTextSize(10);
-            diff.setTextSize(10);
-        }else if( ==2){
-            titleitem.setTextSize(20);
-            dateitem.setTextSize(20);
-            contentitem.setTextSize(20);
-            howmanyDaysleft.setTextSize(20);
-            howmanydaysLeft.setTextSize(20);
-            diff.setTextSize(20);
-        }else if( ==1){
-            titleitem.setTextSize(15);
-            dateitem.setTextSize(15);
-            contentitem.setTextSize(15);
-            howmanyDaysleft.setTextSize(15);
-            howmanydaysLeft.setTextSize(15);
-            diff.setTextSize(15);
-        }
-    }
+//        settingss if( == 0){
+//            titleitem.setTextSize(10);
+//            dateitem.setTextSize(10);
+//            contentitem.setTextSize(10);
+//            howmanyDaysleft.setTextSize(10);
+//            howmanydaysLeft.setTextSize(10);
+//            diff.setTextSize(10);
+//        }else if( ==2){
+//            titleitem.setTextSize(20);
+//            dateitem.setTextSize(20);
+//            contentitem.setTextSize(20);
+//            howmanyDaysleft.setTextSize(20);
+//            howmanydaysLeft.setTextSize(20);
+//            diff.setTextSize(20);
+//        }else if( ==1){
+//            titleitem.setTextSize(15);
+//            dateitem.setTextSize(15);
+//            contentitem.setTextSize(15);
+//            howmanyDaysleft.setTextSize(15);
+//            howmanydaysLeft.setTextSize(15);
+//            diff.setTextSize(15);
+//        }
 
     public Card(String title, long diffday, String content) {
         this.title = title;

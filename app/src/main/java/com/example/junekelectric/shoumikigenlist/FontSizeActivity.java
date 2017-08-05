@@ -35,11 +35,11 @@ import static com.example.junekelectric.shoumikigenlist.R.layout.item;
 
 public class FontSizeActivity extends AppCompatActivity {
     RadioGroup radio;
-    SharedPreferences settingss;
+    SharedPreferences settingss = getSharedPreferences("ShoumiKigen", MODE_PRIVATE);
 
-    EditText titleadd = (EditText)activity_memo.(titlewrite);
-    TextView dateadd = (TextView)activity_memo.(datewrite);
-    EditText contentadd = (TextView)activity_memo.(contentwrite);
+//    EditText titleadd = (EditText)activity_memo.(titlewrite);
+//    TextView dateadd = (TextView)activity_memo.(datewrite);
+//    EditText contentadd = (TextView)activity_memo.(contentwrite);
 
 //    TextView titlelist = (TextView)item.(titleitem);
 //    TextView dayslist = (TextView)item.(dateitem);
@@ -69,7 +69,7 @@ public class FontSizeActivity extends AppCompatActivity {
                     //((RadioButton)findViewById(checkedId)).getText()
                     "Font20 is selected",
                     Toast.LENGTH_SHORT).show();
-        } else {
+        } else if (1 == checkedId){
             Toast.makeText(FontSizeActivity.this,
                     //((RadioButton)findViewById(checkedId)).getText()
                     "Font15 is selected",
@@ -81,9 +81,7 @@ public class FontSizeActivity extends AppCompatActivity {
     public void save(View v) {
         //Preference内操作
         SharedPreferences.Editor editor = settingss.edit();
-        editor.putString("key_font10", 0);
-        editor.putString("key_font15", 1);
-        editor.putString("key_font20", 2);
+
         //editor.commit();
         editor.apply();
         finish();
@@ -98,13 +96,17 @@ public class FontSizeActivity extends AppCompatActivity {
             titleadd.setTextSize(10);
             dateadd.setTextSize(10);
             contentadd.setTextSize(10);
+            editor.putInt("key_font", 10);
 //            titlelist.setTextSize(10);
 //            dayslist.setTextSize(10);
 //            contentlist.setTextSize(10);
 //            daysLeft.setTextSize(10);
 //            Daysleft.setTextSize(10);
 //            diffday.setTextSize(10);
+
         } else if (id == 2) {
+            editor.putInt("key_font", 20);
+
             titleadd.setTextSize(20);
             dateadd.setTextSize(20);
             contentadd.setTextSize(20);
@@ -115,6 +117,8 @@ public class FontSizeActivity extends AppCompatActivity {
             Daysleft.setTextSize(20);
             diffday.setTextSize(20);
         } else {
+            editor.putInt("key_font", 15);
+
             titleadd.setTextSize(15);
             dateadd.setTextSize(15);
             contentadd.setTextSize(15);

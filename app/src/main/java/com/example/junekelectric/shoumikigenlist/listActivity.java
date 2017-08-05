@@ -42,8 +42,6 @@ public class listActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-
-        //floatingactionbutton
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         ImageButton fab = (ImageButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
