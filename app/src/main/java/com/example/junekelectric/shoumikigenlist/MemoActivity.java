@@ -35,7 +35,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class MemoActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
+public class MemoActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
     EditText titleEditText;
     EditText contentEditText;
     TextView dateTextView;
@@ -56,7 +56,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         setContentView(R.layout.activity_memo);
 
         //定義とそれぞれの入力画面の機能
-        titleEditText =  (EditText)findViewById(R.id.titlewrite);
+        titleEditText = (EditText) findViewById(R.id.titlewrite);
         titleEditText.setInputType(InputType.TYPE_CLASS_TEXT);
 
         dateTextView = (TextView) findViewById(R.id.datewrite);
@@ -73,31 +73,34 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
         SharedPreferences settingss = getSharedPreferences("ShoumiKigen", MODE_PRIVATE);
         int fontsize = settingss.getInt("keyfont", 15);
 
-                settingss.if(fontsize == 10){
+        // TODO settingss. ifってなってた
+        if (fontsize == 10) {
             titleEditText.setTextSize(fontsize);
             dateTextView.setTextSize(fontsize);
             contentEditText.setTextSize(fontsize);
 
 
-        //SharedPrefrencesについて定義
+            //SharedPrefrencesについて定義
 //        pref = getSharedPreferences("pref_memo", MODE_PRIVATE);
 //        titleEditText.setText(pref.getString("key_title", ""));
 //        dateTextView.setText(pref.getString("key_date", ""));
 //        contentEditText.setText(pref.getString("key_content", ""));
 
-        //ArrayListについて定義
-        foodList = new ArrayList<>();
-        readFile();
+            //ArrayListについて定義
+            foodList = new ArrayList<>();
+            readFile();
 
-        readList = new ArrayList<String>();
-        readHelperList = new ArrayList<String>();
-        readSubjectFile();
-        readHelperFile();
-        //firststarting();
+            readList = new ArrayList<String>();
+            readHelperList = new ArrayList<String>();
+            readSubjectFile();
+            readHelperFile();
+            //firststarting();
+        }
+        // TODO 下に括弧が足りなかった！
     }
 
-
-    @Override
+    // TODO 下の@Overrideは要らないよ！
+    //@Override
     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
         dateTextView.setText(String.valueOf(year) + "/ " + String.valueOf(monthOfYear + 1) + "/ " + String.valueOf(dayOfMonth));
         mdeadline = String.valueOf(year) + "/ " + String.valueOf(monthOfYear + 1) + "/ " + String.valueOf(dayOfMonth);
@@ -115,7 +118,7 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
     }
 
 
-    public boolean readFile(){
+    public boolean readFile() {
         try {
             FileInputStream fis = openFileInput("lCard");
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -201,13 +204,13 @@ public class MemoActivity extends AppCompatActivity implements DatePickerDialog.
 //        return true;
 //    }
 
-    public void save (View v){
+    public void save(View v) {
         String titleText = titleEditText.getText().toString();
         String dateText = dateTextView.getText().toString();
         String contentText = contentEditText.getText().toString();
         String mcontent = String.valueOf(contentEditText.getText());
         String mtitle = String.valueOf(titleEditText.getText());
-        Card addCard = new Card (mtitle, mdiffday, mcontent);
+        Card addCard = new Card(mtitle, mdiffday, mcontent);
 
         foodList.add(addCard);
         if (titleText.isEmpty() && dateText.isEmpty() && contentText.isEmpty()) {

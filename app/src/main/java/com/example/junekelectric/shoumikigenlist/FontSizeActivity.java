@@ -54,10 +54,10 @@ public class FontSizeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_font_size);
 
         radio = (RadioGroup) findViewById(R.id.radio);
-        radio.setOnCheckedChangeListener(this);
+        //radio.setOnCheckedChangeListener(this);
     }
 
-    @Override
+
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         // 一回選択するたびにtoast型の通知が来る。
         if (0 == checkedId) {
@@ -82,9 +82,7 @@ public class FontSizeActivity extends AppCompatActivity {
         //Preference内操作
         SharedPreferences.Editor editor = settingss.edit();
 
-        //editor.commit();
-        editor.apply();
-        finish();
+
 
         // チェックされているラジオボタンの ID を取得
         int id = radio.getCheckedRadioButtonId();
@@ -93,9 +91,9 @@ public class FontSizeActivity extends AppCompatActivity {
 
         //何も選択されてない時は自動的に15
         if (id == 0) {
-            titleadd.setTextSize(10);
-            dateadd.setTextSize(10);
-            contentadd.setTextSize(10);
+//            titleadd.setTextSize(10);
+//            dateadd.setTextSize(10);
+//            contentadd.setTextSize(10);
             editor.putInt("key_font", 10);
 //            titlelist.setTextSize(10);
 //            dayslist.setTextSize(10);
@@ -107,29 +105,32 @@ public class FontSizeActivity extends AppCompatActivity {
         } else if (id == 2) {
             editor.putInt("key_font", 20);
 
-            titleadd.setTextSize(20);
-            dateadd.setTextSize(20);
-            contentadd.setTextSize(20);
-            titlelist.setTextSize(20);
-            dayslist.setTextSize(20);
-            contentlist.setTextSize(20);
-            daysLeft.setTextSize(20);
-            Daysleft.setTextSize(20);
-            diffday.setTextSize(20);
+//            titleadd.setTextSize(20);
+//            dateadd.setTextSize(20);
+//            contentadd.setTextSize(20);
+//            titlelist.setTextSize(20);
+//            dayslist.setTextSize(20);
+//            contentlist.setTextSize(20);
+//            daysLeft.setTextSize(20);
+//            Daysleft.setTextSize(20);
+//            diffday.setTextSize(20);
         } else {
             editor.putInt("key_font", 15);
 
-            titleadd.setTextSize(15);
-            dateadd.setTextSize(15);
-            contentadd.setTextSize(15);
-            titlelist.setTextSize(15);
-            dayslist.setTextSize(15);
-            contentlist.setTextSize(15);
-            daysLeft.setTextSize(15);
-            Daysleft.setTextSize(15);
-            diffday.setTextSize(15);
+//            titleadd.setTextSize(15);
+//            dateadd.setTextSize(15);
+//            contentadd.setTextSize(15);
+//            titlelist.setTextSize(15);
+//            dayslist.setTextSize(15);
+//            contentlist.setTextSize(15);
+//            daysLeft.setTextSize(15);
+//            Daysleft.setTextSize(15);
+//            diffday.setTextSize(15);
         }
 
+        //editor.commit();
+        editor.apply();
+        finish();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         super.onResume();
